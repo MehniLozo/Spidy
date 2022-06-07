@@ -13,7 +13,13 @@ export class Scraper{
     console.log(name)
   }
 }
-
+//Error stuff
+class Fail extends Error{
+  public constructor(public code:number,message:string){
+    super(message);
+  }
+}
+//--formal
 async function main(){
   const scraper = new Scraper();
   if(args.link.length>0)
