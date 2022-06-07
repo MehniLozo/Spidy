@@ -15,12 +15,11 @@ export class Scraper{
 }
 
 async function main(){
-  var link = "https://www.google.com/";
-
   const scraper = new Scraper();
-  if(args.link.length > 0)
-    link = args.link;
-  await scraper.scrape(link);
+  if(args.link.length>0)
+    await scraper.scrape(args.link);
+  else
+    console.log("Provide a link buddy")
 
 }
 
